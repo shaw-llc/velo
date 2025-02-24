@@ -1,0 +1,40 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#1F2937"/>
+  <rect x="280" y="40" width="1360" height="1000" rx="12" fill="#111827"/>
+  
+  <!-- Header -->
+  <rect x="320" y="80" width="200" height="40" rx="8" fill="#374151"/>
+  <rect x="560" y="80" width="160" height="40" rx="8" fill="#374151"/>
+  <rect x="760" y="80" width="140" height="40" rx="8" fill="#374151"/>
+  
+  <!-- Main Content -->
+  <rect x="320" y="160" width="800" height="400" rx="8" fill="#374151"/>
+  <rect x="1160" y="160" width="400" height="400" rx="8" fill="#374151"/>
+  
+  <!-- Code Editor -->
+  <rect x="320" y="600" width="1240" height="400" rx="8" fill="#374151"/>
+  <rect x="340" y="620" width="1200" height="360" rx="4" fill="#1F2937"/>
+  
+  <!-- Code Lines -->
+  <rect x="360" y="640" width="600" height="16" rx="2" fill="#4B5563"/>
+  <rect x="360" y="670" width="800" height="16" rx="2" fill="#4B5563"/>
+  <rect x="360" y="700" width="700" height="16" rx="2" fill="#4B5563"/>
+  <rect x="360" y="730" width="900" height="16" rx="2" fill="#4B5563"/>
+  <rect x="360" y="760" width="600" height="16" rx="2" fill="#4B5563"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="1500" cy="200" r="120" fill="url(#gradient1)" fill-opacity="0.1"/>
+  <circle cx="400" cy="400" r="160" fill="url(#gradient2)" fill-opacity="0.1"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <radialGradient id="gradient1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1500 200) rotate(90) scale(120)">
+      <stop stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gradient2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 400) rotate(90) scale(160)">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg> 
