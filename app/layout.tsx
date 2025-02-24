@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark scroll-smooth">
       <head>
         <script defer dangerouslySetInnerHTML={{
           __html: `
@@ -26,29 +26,85 @@ export default function RootLayout({
         <script defer src="https://storage.googleapis.com/agentx-cdn-01/agentx-chat.js" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
-          <nav className="fixed top-0 w-full bg-gray-800/80 backdrop-blur-sm border-b border-gray-700 z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center justify-between h-16">
-                <div className="flex items-center">
-                  <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                    Velo
-                  </span>
+        <div className="relative min-h-screen">
+          {/* Background gradient */}
+          <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-gray-900 to-indigo-950 -z-10" />
+          <div className="fixed inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] -z-10" />
+
+          {/* Navigation */}
+          <nav className="fixed top-0 w-full z-50 backdrop-blur-sm border-b border-gray-800/50">
+            <div className="container mx-auto">
+              <div className="flex items-center justify-between h-16 px-4">
+                <div className="flex items-center space-x-8">
+                  <a href="/" className="flex items-center space-x-2">
+                    <span className="text-2xl font-bold heading-gradient">
+                      Velo
+                    </span>
+                  </a>
+                  <div className="hidden md:flex items-center space-x-1">
+                    <a href="#features" className="nav-link">Features</a>
+                    <a href="#pricing" className="nav-link">Pricing</a>
+                    <a href="#docs" className="nav-link">Documentation</a>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <a href="/login" className="btn btn-secondary">
+                    Sign In
+                  </a>
+                  <a href="/signup" className="btn btn-primary">
+                    Get Started
+                  </a>
                 </div>
               </div>
             </div>
           </nav>
-          
-          <main className="pt-16 min-h-screen animate-fade-in">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-              {children}
-            </div>
+
+          {/* Main content */}
+          <main className="pt-16 relative">
+            {children}
           </main>
-          
-          <footer className="bg-gray-800/50 border-t border-gray-700">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-              <div className="text-center text-gray-400 text-sm">
-                © {new Date().getFullYear()} Velo. All rights reserved.
+
+          {/* Footer */}
+          <footer className="mt-32 border-t border-gray-800">
+            <div className="container mx-auto px-4 py-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                  <h3 className="text-lg font-semibold mb-4">Product</h3>
+                  <ul className="space-y-2">
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">Features</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">Pricing</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">Documentation</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-4">Company</h3>
+                  <ul className="space-y-2">
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">About</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">Blog</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">Careers</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-4">Resources</h3>
+                  <ul className="space-y-2">
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">Community</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">Help Center</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">Status</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold mb-4">Legal</h3>
+                  <ul className="space-y-2">
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">Privacy</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">Terms</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition">Security</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-12 pt-8 border-t border-gray-800">
+                <div className="text-center text-gray-400">
+                  <p>© {new Date().getFullYear()} Velo. All rights reserved.</p>
+                </div>
               </div>
             </div>
           </footer>
